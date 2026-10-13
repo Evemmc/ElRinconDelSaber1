@@ -37,17 +37,17 @@
             panel3 = new Panel();
             panel7 = new Panel();
             panel2 = new Panel();
-            button6 = new Button();
+            btnCerrarApp = new Button();
             panel4 = new Panel();
-            button7 = new Button();
+            btnAjustes = new Button();
             panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
+            btnReportes = new Button();
+            btnLibros = new Button();
             panel5 = new Panel();
             pnlMenu = new Panel();
-            button4 = new Button();
+            btnDevolver = new Button();
             btnUsuarios = new Button();
-            button5 = new Button();
+            btnPrestar = new Button();
             btnInicio = new Button();
             pnlArriba = new Panel();
             btnMinimizar = new PictureBox();
@@ -55,43 +55,44 @@
             btnMaximizar = new PictureBox();
             btnCerrar = new PictureBox();
             panelContenedor = new Panel();
-            panel17 = new Panel();
+            pnlAjustes = new Panel();
             pictureBox7 = new PictureBox();
-            button13 = new Button();
+            btnAbrirAjustes = new Button();
             label14 = new Label();
             label15 = new Label();
-            panel16 = new Panel();
+            pnlReportes = new Panel();
             pictureBox6 = new PictureBox();
-            button12 = new Button();
+            btnAbrirReportes = new Button();
             label12 = new Label();
             label13 = new Label();
-            panel15 = new Panel();
+            pnlDevoluciones = new Panel();
             pictureBox5 = new PictureBox();
-            button11 = new Button();
+            btnAbrirDevoluciones = new Button();
             label10 = new Label();
             label11 = new Label();
-            panel14 = new Panel();
+            pnlPrestamo = new Panel();
             pictureBox4 = new PictureBox();
-            button10 = new Button();
+            btnAbrirPrestamos = new Button();
             label8 = new Label();
             label9 = new Label();
-            panel13 = new Panel();
+            pnlLibros = new Panel();
             pictureBox3 = new PictureBox();
-            button9 = new Button();
+            btnAbrirLibros = new Button();
             label6 = new Label();
             label7 = new Label();
-            panel12 = new Panel();
-            panel11 = new Panel();
             panel10 = new Panel();
-            pictureBox2 = new PictureBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            panel9 = new Panel();
+            pnlUsuarios = new Panel();
             pictureBox1 = new PictureBox();
             btnAbrirUsuarios = new Button();
             label2 = new Label();
             label1 = new Label();
+            pnlEncabezado = new Panel();
+            panel12 = new Panel();
+            panel11 = new Panel();
+            ptbLibro = new PictureBox();
+            lblGestion = new Label();
+            lblElRinconDelSaber = new Label();
+            lblBienvenido = new Label();
             pnlLado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             pnlArriba.SuspendLayout();
@@ -100,19 +101,20 @@
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             panelContenedor.SuspendLayout();
-            panel17.SuspendLayout();
+            pnlAjustes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            panel16.SuspendLayout();
+            pnlReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel15.SuspendLayout();
+            pnlDevoluciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel14.SuspendLayout();
+            pnlPrestamo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel13.SuspendLayout();
+            pnlLibros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel9.SuspendLayout();
+            pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlEncabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbLibro).BeginInit();
             SuspendLayout();
             // 
             // pnlLado
@@ -125,17 +127,17 @@
             pnlLado.Controls.Add(panel3);
             pnlLado.Controls.Add(panel7);
             pnlLado.Controls.Add(panel2);
-            pnlLado.Controls.Add(button6);
+            pnlLado.Controls.Add(btnCerrarApp);
             pnlLado.Controls.Add(panel4);
-            pnlLado.Controls.Add(button7);
+            pnlLado.Controls.Add(btnAjustes);
             pnlLado.Controls.Add(panel1);
-            pnlLado.Controls.Add(button3);
-            pnlLado.Controls.Add(button2);
+            pnlLado.Controls.Add(btnReportes);
+            pnlLado.Controls.Add(btnLibros);
             pnlLado.Controls.Add(panel5);
             pnlLado.Controls.Add(pnlMenu);
-            pnlLado.Controls.Add(button4);
+            pnlLado.Controls.Add(btnDevolver);
             pnlLado.Controls.Add(btnUsuarios);
-            pnlLado.Controls.Add(button5);
+            pnlLado.Controls.Add(btnPrestar);
             pnlLado.Controls.Add(btnInicio);
             pnlLado.Dock = DockStyle.Left;
             pnlLado.Location = new Point(0, 0);
@@ -208,21 +210,22 @@
             panel2.Size = new Size(10, 39);
             panel2.TabIndex = 3;
             // 
-            // button6
+            // btnCerrarApp
             // 
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(0, 557);
-            button6.Name = "button6";
-            button6.Size = new Size(225, 39);
-            button6.TabIndex = 10;
-            button6.Text = "     Cerrar";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button6.UseVisualStyleBackColor = true;
+            btnCerrarApp.FlatAppearance.BorderSize = 0;
+            btnCerrarApp.FlatStyle = FlatStyle.Flat;
+            btnCerrarApp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCerrarApp.ForeColor = Color.White;
+            btnCerrarApp.Image = (Image)resources.GetObject("btnCerrarApp.Image");
+            btnCerrarApp.Location = new Point(0, 557);
+            btnCerrarApp.Name = "btnCerrarApp";
+            btnCerrarApp.Size = new Size(225, 39);
+            btnCerrarApp.TabIndex = 10;
+            btnCerrarApp.Text = "     Cerrar";
+            btnCerrarApp.TextAlign = ContentAlignment.MiddleLeft;
+            btnCerrarApp.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCerrarApp.UseVisualStyleBackColor = true;
+            btnCerrarApp.Click += btnCerrarApp_Click;
             // 
             // panel4
             // 
@@ -232,21 +235,22 @@
             panel4.Size = new Size(10, 39);
             panel4.TabIndex = 9;
             // 
-            // button7
+            // btnAjustes
             // 
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.Location = new Point(0, 512);
-            button7.Name = "button7";
-            button7.Size = new Size(225, 39);
-            button7.TabIndex = 11;
-            button7.Text = "    Ajustes";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button7.UseVisualStyleBackColor = true;
+            btnAjustes.FlatAppearance.BorderSize = 0;
+            btnAjustes.FlatStyle = FlatStyle.Flat;
+            btnAjustes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAjustes.ForeColor = Color.White;
+            btnAjustes.Image = (Image)resources.GetObject("btnAjustes.Image");
+            btnAjustes.Location = new Point(0, 512);
+            btnAjustes.Name = "btnAjustes";
+            btnAjustes.Size = new Size(225, 39);
+            btnAjustes.TabIndex = 11;
+            btnAjustes.Text = "    Ajustes";
+            btnAjustes.TextAlign = ContentAlignment.MiddleLeft;
+            btnAjustes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAjustes.UseVisualStyleBackColor = true;
+            btnAjustes.Click += btnAjustes_Click;
             // 
             // panel1
             // 
@@ -256,37 +260,39 @@
             panel1.Size = new Size(10, 39);
             panel1.TabIndex = 3;
             // 
-            // button3
+            // btnReportes
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(0, 467);
-            button3.Name = "button3";
-            button3.Size = new Size(225, 39);
-            button3.TabIndex = 6;
-            button3.Text = "      Reportes";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button3.UseVisualStyleBackColor = true;
+            btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatStyle = FlatStyle.Flat;
+            btnReportes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReportes.ForeColor = Color.White;
+            btnReportes.Image = (Image)resources.GetObject("btnReportes.Image");
+            btnReportes.Location = new Point(0, 467);
+            btnReportes.Name = "btnReportes";
+            btnReportes.Size = new Size(225, 39);
+            btnReportes.TabIndex = 6;
+            btnReportes.Text = "      Reportes";
+            btnReportes.TextAlign = ContentAlignment.MiddleLeft;
+            btnReportes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
-            // button2
+            // btnLibros
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(0, 332);
-            button2.Name = "button2";
-            button2.Size = new Size(225, 39);
-            button2.TabIndex = 2;
-            button2.Text = "      Libros";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.UseVisualStyleBackColor = true;
+            btnLibros.FlatAppearance.BorderSize = 0;
+            btnLibros.FlatStyle = FlatStyle.Flat;
+            btnLibros.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLibros.ForeColor = Color.White;
+            btnLibros.Image = (Image)resources.GetObject("btnLibros.Image");
+            btnLibros.Location = new Point(0, 332);
+            btnLibros.Name = "btnLibros";
+            btnLibros.Size = new Size(225, 39);
+            btnLibros.TabIndex = 2;
+            btnLibros.Text = "      Libros";
+            btnLibros.TextAlign = ContentAlignment.MiddleLeft;
+            btnLibros.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnLibros.UseVisualStyleBackColor = true;
+            btnLibros.Click += btnLibros_Click;
             // 
             // panel5
             // 
@@ -305,21 +311,22 @@
             pnlMenu.TabIndex = 1;
             pnlMenu.Paint += pnlMenu_Paint;
             // 
-            // button4
+            // btnDevolver
             // 
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(0, 422);
-            button4.Name = "button4";
-            button4.Size = new Size(225, 39);
-            button4.TabIndex = 7;
-            button4.Text = "      Devolver";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button4.UseVisualStyleBackColor = true;
+            btnDevolver.FlatAppearance.BorderSize = 0;
+            btnDevolver.FlatStyle = FlatStyle.Flat;
+            btnDevolver.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDevolver.ForeColor = Color.White;
+            btnDevolver.Image = (Image)resources.GetObject("btnDevolver.Image");
+            btnDevolver.Location = new Point(0, 422);
+            btnDevolver.Name = "btnDevolver";
+            btnDevolver.Size = new Size(225, 39);
+            btnDevolver.TabIndex = 7;
+            btnDevolver.Text = "      Devolver";
+            btnDevolver.TextAlign = ContentAlignment.MiddleLeft;
+            btnDevolver.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDevolver.UseVisualStyleBackColor = true;
+            btnDevolver.Click += btnDevolver_Click;
             // 
             // btnUsuarios
             // 
@@ -338,21 +345,22 @@
             btnUsuarios.UseVisualStyleBackColor = true;
             btnUsuarios.Click += btnUsuarios_Click;
             // 
-            // button5
+            // btnPrestar
             // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.Location = new Point(0, 377);
-            button5.Name = "button5";
-            button5.Size = new Size(225, 39);
-            button5.TabIndex = 4;
-            button5.Text = "      Prestar";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button5.UseVisualStyleBackColor = true;
+            btnPrestar.FlatAppearance.BorderSize = 0;
+            btnPrestar.FlatStyle = FlatStyle.Flat;
+            btnPrestar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPrestar.ForeColor = Color.White;
+            btnPrestar.Image = Properties.Resources.icons8_datos_en_ambas_direcciones_27;
+            btnPrestar.Location = new Point(0, 377);
+            btnPrestar.Name = "btnPrestar";
+            btnPrestar.Size = new Size(225, 39);
+            btnPrestar.TabIndex = 4;
+            btnPrestar.Text = "      Prestar";
+            btnPrestar.TextAlign = ContentAlignment.MiddleLeft;
+            btnPrestar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnPrestar.UseVisualStyleBackColor = true;
+            btnPrestar.Click += btnPrestar_Click;
             // 
             // btnInicio
             // 
@@ -390,7 +398,7 @@
             btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimizar.Cursor = Cursors.Hand;
             btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.Location = new Point(717, 6);
+            btnMinimizar.Location = new Point(661, 6);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(23, 23);
             btnMinimizar.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -403,7 +411,7 @@
             btnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRestaurar.Cursor = Cursors.Hand;
             btnRestaurar.Image = (Image)resources.GetObject("btnRestaurar.Image");
-            btnRestaurar.Location = new Point(746, 6);
+            btnRestaurar.Location = new Point(720, 6);
             btnRestaurar.Name = "btnRestaurar";
             btnRestaurar.Size = new Size(23, 23);
             btnRestaurar.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -416,7 +424,7 @@
             // 
             btnMaximizar.Cursor = Cursors.Hand;
             btnMaximizar.Image = (Image)resources.GetObject("btnMaximizar.Image");
-            btnMaximizar.Location = new Point(746, 6);
+            btnMaximizar.Location = new Point(720, 6);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.Size = new Size(23, 23);
             btnMaximizar.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -440,36 +448,32 @@
             // panelContenedor
             // 
             panelContenedor.BackColor = Color.FromArgb(232, 224, 229);
-            panelContenedor.Controls.Add(panel17);
-            panelContenedor.Controls.Add(panel16);
-            panelContenedor.Controls.Add(panel15);
-            panelContenedor.Controls.Add(panel14);
-            panelContenedor.Controls.Add(panel13);
-            panelContenedor.Controls.Add(panel12);
-            panelContenedor.Controls.Add(panel11);
+            panelContenedor.Controls.Add(pnlAjustes);
+            panelContenedor.Controls.Add(pnlReportes);
+            panelContenedor.Controls.Add(pnlDevoluciones);
+            panelContenedor.Controls.Add(pnlPrestamo);
+            panelContenedor.Controls.Add(pnlLibros);
             panelContenedor.Controls.Add(panel10);
-            panelContenedor.Controls.Add(pictureBox2);
-            panelContenedor.Controls.Add(label5);
-            panelContenedor.Controls.Add(label4);
-            panelContenedor.Controls.Add(label3);
-            panelContenedor.Controls.Add(panel9);
+            panelContenedor.Controls.Add(pnlUsuarios);
+            panelContenedor.Controls.Add(pnlEncabezado);
+            panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(209, 47);
             panelContenedor.Name = "panelContenedor";
             panelContenedor.Size = new Size(815, 650);
             panelContenedor.TabIndex = 2;
             panelContenedor.Paint += panel8_Paint;
             // 
-            // panel17
+            // pnlAjustes
             // 
-            panel17.BackColor = Color.White;
-            panel17.Controls.Add(pictureBox7);
-            panel17.Controls.Add(button13);
-            panel17.Controls.Add(label14);
-            panel17.Controls.Add(label15);
-            panel17.Location = new Point(550, 423);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(219, 208);
-            panel17.TabIndex = 9;
+            pnlAjustes.BackColor = Color.White;
+            pnlAjustes.Controls.Add(pictureBox7);
+            pnlAjustes.Controls.Add(btnAbrirAjustes);
+            pnlAjustes.Controls.Add(label14);
+            pnlAjustes.Controls.Add(label15);
+            pnlAjustes.Location = new Point(550, 423);
+            pnlAjustes.Name = "pnlAjustes";
+            pnlAjustes.Size = new Size(219, 208);
+            pnlAjustes.TabIndex = 9;
             // 
             // pictureBox7
             // 
@@ -481,19 +485,20 @@
             pictureBox7.TabIndex = 1;
             pictureBox7.TabStop = false;
             // 
-            // button13
+            // btnAbrirAjustes
             // 
-            button13.BackColor = Color.FromArgb(138, 31, 61);
-            button13.FlatAppearance.BorderSize = 0;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button13.ForeColor = Color.White;
-            button13.Location = new Point(47, 159);
-            button13.Name = "button13";
-            button13.Size = new Size(123, 37);
-            button13.TabIndex = 2;
-            button13.Text = "Abrir módulo";
-            button13.UseVisualStyleBackColor = false;
+            btnAbrirAjustes.BackColor = Color.FromArgb(138, 31, 61);
+            btnAbrirAjustes.FlatAppearance.BorderSize = 0;
+            btnAbrirAjustes.FlatStyle = FlatStyle.Flat;
+            btnAbrirAjustes.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirAjustes.ForeColor = Color.White;
+            btnAbrirAjustes.Location = new Point(47, 159);
+            btnAbrirAjustes.Name = "btnAbrirAjustes";
+            btnAbrirAjustes.Size = new Size(123, 37);
+            btnAbrirAjustes.TabIndex = 2;
+            btnAbrirAjustes.Text = "Abrir módulo";
+            btnAbrirAjustes.UseVisualStyleBackColor = false;
+            btnAbrirAjustes.Click += btnAbrirAjustes_Click;
             // 
             // label14
             // 
@@ -514,17 +519,17 @@
             label15.TabIndex = 0;
             label15.Text = "Ajustes";
             // 
-            // panel16
+            // pnlReportes
             // 
-            panel16.BackColor = Color.White;
-            panel16.Controls.Add(pictureBox6);
-            panel16.Controls.Add(button12);
-            panel16.Controls.Add(label12);
-            panel16.Controls.Add(label13);
-            panel16.Location = new Point(299, 423);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(219, 208);
-            panel16.TabIndex = 8;
+            pnlReportes.BackColor = Color.White;
+            pnlReportes.Controls.Add(pictureBox6);
+            pnlReportes.Controls.Add(btnAbrirReportes);
+            pnlReportes.Controls.Add(label12);
+            pnlReportes.Controls.Add(label13);
+            pnlReportes.Location = new Point(299, 423);
+            pnlReportes.Name = "pnlReportes";
+            pnlReportes.Size = new Size(219, 208);
+            pnlReportes.TabIndex = 8;
             // 
             // pictureBox6
             // 
@@ -536,19 +541,20 @@
             pictureBox6.TabIndex = 1;
             pictureBox6.TabStop = false;
             // 
-            // button12
+            // btnAbrirReportes
             // 
-            button12.BackColor = Color.FromArgb(138, 31, 61);
-            button12.FlatAppearance.BorderSize = 0;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = Color.White;
-            button12.Location = new Point(47, 159);
-            button12.Name = "button12";
-            button12.Size = new Size(123, 37);
-            button12.TabIndex = 2;
-            button12.Text = "Abrir módulo";
-            button12.UseVisualStyleBackColor = false;
+            btnAbrirReportes.BackColor = Color.FromArgb(138, 31, 61);
+            btnAbrirReportes.FlatAppearance.BorderSize = 0;
+            btnAbrirReportes.FlatStyle = FlatStyle.Flat;
+            btnAbrirReportes.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirReportes.ForeColor = Color.White;
+            btnAbrirReportes.Location = new Point(47, 159);
+            btnAbrirReportes.Name = "btnAbrirReportes";
+            btnAbrirReportes.Size = new Size(123, 37);
+            btnAbrirReportes.TabIndex = 2;
+            btnAbrirReportes.Text = "Abrir módulo";
+            btnAbrirReportes.UseVisualStyleBackColor = false;
+            btnAbrirReportes.Click += btnAbrirReportes_Click;
             // 
             // label12
             // 
@@ -569,17 +575,17 @@
             label13.TabIndex = 0;
             label13.Text = "Reportes";
             // 
-            // panel15
+            // pnlDevoluciones
             // 
-            panel15.BackColor = Color.White;
-            panel15.Controls.Add(pictureBox5);
-            panel15.Controls.Add(button11);
-            panel15.Controls.Add(label10);
-            panel15.Controls.Add(label11);
-            panel15.Location = new Point(45, 423);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(219, 208);
-            panel15.TabIndex = 3;
+            pnlDevoluciones.BackColor = Color.White;
+            pnlDevoluciones.Controls.Add(pictureBox5);
+            pnlDevoluciones.Controls.Add(btnAbrirDevoluciones);
+            pnlDevoluciones.Controls.Add(label10);
+            pnlDevoluciones.Controls.Add(label11);
+            pnlDevoluciones.Location = new Point(45, 423);
+            pnlDevoluciones.Name = "pnlDevoluciones";
+            pnlDevoluciones.Size = new Size(219, 208);
+            pnlDevoluciones.TabIndex = 3;
             // 
             // pictureBox5
             // 
@@ -591,19 +597,20 @@
             pictureBox5.TabIndex = 1;
             pictureBox5.TabStop = false;
             // 
-            // button11
+            // btnAbrirDevoluciones
             // 
-            button11.BackColor = Color.FromArgb(138, 31, 61);
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.ForeColor = Color.White;
-            button11.Location = new Point(47, 159);
-            button11.Name = "button11";
-            button11.Size = new Size(123, 37);
-            button11.TabIndex = 2;
-            button11.Text = "Abrir módulo";
-            button11.UseVisualStyleBackColor = false;
+            btnAbrirDevoluciones.BackColor = Color.FromArgb(138, 31, 61);
+            btnAbrirDevoluciones.FlatAppearance.BorderSize = 0;
+            btnAbrirDevoluciones.FlatStyle = FlatStyle.Flat;
+            btnAbrirDevoluciones.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirDevoluciones.ForeColor = Color.White;
+            btnAbrirDevoluciones.Location = new Point(47, 159);
+            btnAbrirDevoluciones.Name = "btnAbrirDevoluciones";
+            btnAbrirDevoluciones.Size = new Size(123, 37);
+            btnAbrirDevoluciones.TabIndex = 2;
+            btnAbrirDevoluciones.Text = "Abrir módulo";
+            btnAbrirDevoluciones.UseVisualStyleBackColor = false;
+            btnAbrirDevoluciones.Click += btnAbrirDevoluciones_Click;
             // 
             // label10
             // 
@@ -624,17 +631,17 @@
             label11.TabIndex = 0;
             label11.Text = "Devoluciones";
             // 
-            // panel14
+            // pnlPrestamo
             // 
-            panel14.BackColor = Color.White;
-            panel14.Controls.Add(pictureBox4);
-            panel14.Controls.Add(button10);
-            panel14.Controls.Add(label8);
-            panel14.Controls.Add(label9);
-            panel14.Location = new Point(550, 187);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(219, 208);
-            panel14.TabIndex = 4;
+            pnlPrestamo.BackColor = Color.White;
+            pnlPrestamo.Controls.Add(pictureBox4);
+            pnlPrestamo.Controls.Add(btnAbrirPrestamos);
+            pnlPrestamo.Controls.Add(label8);
+            pnlPrestamo.Controls.Add(label9);
+            pnlPrestamo.Location = new Point(550, 187);
+            pnlPrestamo.Name = "pnlPrestamo";
+            pnlPrestamo.Size = new Size(219, 208);
+            pnlPrestamo.TabIndex = 4;
             // 
             // pictureBox4
             // 
@@ -646,19 +653,20 @@
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
             // 
-            // button10
+            // btnAbrirPrestamos
             // 
-            button10.BackColor = Color.FromArgb(138, 31, 61);
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button10.ForeColor = Color.White;
-            button10.Location = new Point(47, 159);
-            button10.Name = "button10";
-            button10.Size = new Size(123, 37);
-            button10.TabIndex = 2;
-            button10.Text = "Abrir módulo";
-            button10.UseVisualStyleBackColor = false;
+            btnAbrirPrestamos.BackColor = Color.FromArgb(138, 31, 61);
+            btnAbrirPrestamos.FlatAppearance.BorderSize = 0;
+            btnAbrirPrestamos.FlatStyle = FlatStyle.Flat;
+            btnAbrirPrestamos.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirPrestamos.ForeColor = Color.White;
+            btnAbrirPrestamos.Location = new Point(47, 159);
+            btnAbrirPrestamos.Name = "btnAbrirPrestamos";
+            btnAbrirPrestamos.Size = new Size(123, 37);
+            btnAbrirPrestamos.TabIndex = 2;
+            btnAbrirPrestamos.Text = "Abrir módulo";
+            btnAbrirPrestamos.UseVisualStyleBackColor = false;
+            btnAbrirPrestamos.Click += btnAbrirPrestamos_Click;
             // 
             // label8
             // 
@@ -679,17 +687,17 @@
             label9.TabIndex = 0;
             label9.Text = "Préstamos";
             // 
-            // panel13
+            // pnlLibros
             // 
-            panel13.BackColor = Color.White;
-            panel13.Controls.Add(pictureBox3);
-            panel13.Controls.Add(button9);
-            panel13.Controls.Add(label6);
-            panel13.Controls.Add(label7);
-            panel13.Location = new Point(299, 187);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(219, 208);
-            panel13.TabIndex = 3;
+            pnlLibros.BackColor = Color.White;
+            pnlLibros.Controls.Add(pictureBox3);
+            pnlLibros.Controls.Add(btnAbrirLibros);
+            pnlLibros.Controls.Add(label6);
+            pnlLibros.Controls.Add(label7);
+            pnlLibros.Location = new Point(299, 187);
+            pnlLibros.Name = "pnlLibros";
+            pnlLibros.Size = new Size(219, 208);
+            pnlLibros.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -701,19 +709,20 @@
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
             // 
-            // button9
+            // btnAbrirLibros
             // 
-            button9.BackColor = Color.FromArgb(138, 31, 61);
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(47, 159);
-            button9.Name = "button9";
-            button9.Size = new Size(123, 37);
-            button9.TabIndex = 2;
-            button9.Text = "Abrir módulo";
-            button9.UseVisualStyleBackColor = false;
+            btnAbrirLibros.BackColor = Color.FromArgb(138, 31, 61);
+            btnAbrirLibros.FlatAppearance.BorderSize = 0;
+            btnAbrirLibros.FlatStyle = FlatStyle.Flat;
+            btnAbrirLibros.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAbrirLibros.ForeColor = Color.White;
+            btnAbrirLibros.Location = new Point(47, 159);
+            btnAbrirLibros.Name = "btnAbrirLibros";
+            btnAbrirLibros.Size = new Size(123, 37);
+            btnAbrirLibros.TabIndex = 2;
+            btnAbrirLibros.Text = "Abrir módulo";
+            btnAbrirLibros.UseVisualStyleBackColor = false;
+            btnAbrirLibros.Click += btnAbrirLibros_Click;
             // 
             // label6
             // 
@@ -734,22 +743,6 @@
             label7.TabIndex = 0;
             label7.Text = "Libros";
             // 
-            // panel12
-            // 
-            panel12.BackColor = Color.FromArgb(138, 31, 61);
-            panel12.Location = new Point(272, 109);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(135, 1);
-            panel12.TabIndex = 7;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.FromArgb(138, 31, 61);
-            panel11.Location = new Point(446, 109);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(150, 1);
-            panel11.TabIndex = 6;
-            // 
             // panel10
             // 
             panel10.Location = new Point(365, 225);
@@ -757,58 +750,17 @@
             panel10.Size = new Size(200, 1);
             panel10.TabIndex = 5;
             // 
-            // pictureBox2
+            // pnlUsuarios
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(413, 99);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(27, 27);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(297, 137);
-            label5.Name = "label5";
-            label5.Size = new Size(260, 20);
-            label5.TabIndex = 3;
-            label5.Text = "Gestión inteligente para tu biblioteca ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(138, 31, 61);
-            label4.Location = new Point(237, 49);
-            label4.Name = "label4";
-            label4.Size = new Size(397, 47);
-            label4.TabIndex = 2;
-            label4.Text = "EL RINCÓN DEL SABER";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(332, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(194, 25);
-            label3.TabIndex = 1;
-            label3.Text = "Bienvenido al sistema";
-            // 
-            // panel9
-            // 
-            panel9.BackColor = Color.White;
-            panel9.Controls.Add(pictureBox1);
-            panel9.Controls.Add(btnAbrirUsuarios);
-            panel9.Controls.Add(label2);
-            panel9.Controls.Add(label1);
-            panel9.Location = new Point(45, 187);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(219, 208);
-            panel9.TabIndex = 0;
+            pnlUsuarios.BackColor = Color.White;
+            pnlUsuarios.Controls.Add(pictureBox1);
+            pnlUsuarios.Controls.Add(btnAbrirUsuarios);
+            pnlUsuarios.Controls.Add(label2);
+            pnlUsuarios.Controls.Add(label1);
+            pnlUsuarios.Location = new Point(45, 187);
+            pnlUsuarios.Name = "pnlUsuarios";
+            pnlUsuarios.Size = new Size(219, 208);
+            pnlUsuarios.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -854,6 +806,77 @@
             label1.TabIndex = 0;
             label1.Text = "Usuarios";
             // 
+            // pnlEncabezado
+            // 
+            pnlEncabezado.Anchor = AnchorStyles.Top;
+            pnlEncabezado.Controls.Add(panel12);
+            pnlEncabezado.Controls.Add(panel11);
+            pnlEncabezado.Controls.Add(ptbLibro);
+            pnlEncabezado.Controls.Add(lblGestion);
+            pnlEncabezado.Controls.Add(lblElRinconDelSaber);
+            pnlEncabezado.Controls.Add(lblBienvenido);
+            pnlEncabezado.Location = new Point(211, 20);
+            pnlEncabezado.Name = "pnlEncabezado";
+            pnlEncabezado.Size = new Size(422, 149);
+            pnlEncabezado.TabIndex = 10;
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.FromArgb(138, 31, 61);
+            panel12.Location = new Point(37, 94);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(135, 1);
+            panel12.TabIndex = 12;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(138, 31, 61);
+            panel11.Location = new Point(245, 94);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(150, 1);
+            panel11.TabIndex = 11;
+            // 
+            // ptbLibro
+            // 
+            ptbLibro.Image = (Image)resources.GetObject("ptbLibro.Image");
+            ptbLibro.Location = new Point(197, 83);
+            ptbLibro.Name = "ptbLibro";
+            ptbLibro.Size = new Size(27, 27);
+            ptbLibro.SizeMode = PictureBoxSizeMode.AutoSize;
+            ptbLibro.TabIndex = 10;
+            ptbLibro.TabStop = false;
+            // 
+            // lblGestion
+            // 
+            lblGestion.AutoSize = true;
+            lblGestion.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGestion.Location = new Point(69, 113);
+            lblGestion.Name = "lblGestion";
+            lblGestion.Size = new Size(260, 20);
+            lblGestion.TabIndex = 9;
+            lblGestion.Text = "Gestión inteligente para tu biblioteca ";
+            // 
+            // lblElRinconDelSaber
+            // 
+            lblElRinconDelSaber.AutoSize = true;
+            lblElRinconDelSaber.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblElRinconDelSaber.ForeColor = Color.FromArgb(138, 31, 61);
+            lblElRinconDelSaber.Location = new Point(15, 33);
+            lblElRinconDelSaber.Name = "lblElRinconDelSaber";
+            lblElRinconDelSaber.Size = new Size(397, 47);
+            lblElRinconDelSaber.TabIndex = 8;
+            lblElRinconDelSaber.Text = "EL RINCÓN DEL SABER";
+            // 
+            // lblBienvenido
+            // 
+            lblBienvenido.AutoSize = true;
+            lblBienvenido.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBienvenido.Location = new Point(110, 8);
+            lblBienvenido.Name = "lblBienvenido";
+            lblBienvenido.Size = new Size(194, 25);
+            lblBienvenido.TabIndex = 7;
+            lblBienvenido.Text = "Bienvenido al sistema";
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -875,26 +898,27 @@
             ((System.ComponentModel.ISupportInitialize)btnMaximizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             panelContenedor.ResumeLayout(false);
-            panelContenedor.PerformLayout();
-            panel17.ResumeLayout(false);
-            panel17.PerformLayout();
+            pnlAjustes.ResumeLayout(false);
+            pnlAjustes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
+            pnlReportes.ResumeLayout(false);
+            pnlReportes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            panel15.ResumeLayout(false);
-            panel15.PerformLayout();
+            pnlDevoluciones.ResumeLayout(false);
+            pnlDevoluciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
+            pnlPrestamo.ResumeLayout(false);
+            pnlPrestamo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
+            pnlLibros.ResumeLayout(false);
+            pnlLibros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
+            pnlUsuarios.ResumeLayout(false);
+            pnlUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlEncabezado.ResumeLayout(false);
+            pnlEncabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbLibro).EndInit();
             ResumeLayout(false);
         }
 
@@ -908,52 +932,46 @@
         private Panel panel3;
         private Panel panel7;
         private Panel panel2;
-        private Button button6;
+        private Button btnCerrarApp;
         private Panel panel4;
-        private Button button7;
+        private Button btnAjustes;
         private Panel panel1;
-        private Button button3;
-        private Button button2;
+        private Button btnReportes;
+        private Button btnLibros;
         private Panel panel5;
-        private Button button4;
+        private Button btnDevolver;
         private Button btnUsuarios;
-        private Button button5;
+        private Button btnPrestar;
         private Panel panelContenedor;
-        private Panel panel9;
+        private Panel pnlUsuarios;
         private Button btnAbrirUsuarios;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private Label label4;
-        private Label label3;
-        private Label label5;
-        private PictureBox pictureBox2;
-        private Panel panel12;
-        private Panel panel11;
         private Panel panel10;
-        private Panel panel16;
+        private Panel pnlReportes;
         private PictureBox pictureBox6;
-        private Button button12;
+        private Button btnAbrirReportes;
         private Label label12;
         private Label label13;
-        private Panel panel15;
+        private Panel pnlDevoluciones;
         private PictureBox pictureBox5;
-        private Button button11;
+        private Button btnAbrirDevoluciones;
         private Label label10;
         private Label label11;
-        private Panel panel14;
+        private Panel pnlPrestamo;
         private PictureBox pictureBox4;
-        private Button button10;
+        private Button btnAbrirPrestamos;
         private Label label8;
         private Label label9;
-        private Panel panel13;
+        private Panel pnlLibros;
         private PictureBox pictureBox3;
-        private Button button9;
+        private Button btnAbrirLibros;
         private Label label6;
         private Label label7;
-        private Panel panel17;
+        private Panel pnlAjustes;
         private PictureBox pictureBox7;
-        private Button button13;
+        private Button btnAbrirAjustes;
         private Label label14;
         private Label label15;
         private PictureBox pictureBox8;
@@ -963,5 +981,12 @@
         private PictureBox btnRestaurar;
         private PictureBox btnMaximizar;
         private PictureBox btnMinimizar;
+        private Panel pnlEncabezado;
+        private Panel panel12;
+        private Panel panel11;
+        private PictureBox ptbLibro;
+        private Label lblGestion;
+        private Label lblElRinconDelSaber;
+        private Label lblBienvenido;
     }
 }

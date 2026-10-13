@@ -133,6 +133,16 @@ namespace ElRinconDelSaber.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_búsqueda_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-búsqueda-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_casa_27 {
             get {
                 object obj = ResourceManager.GetObject("icons8-casa-27", resourceCulture);
@@ -143,9 +153,29 @@ namespace ElRinconDelSaber.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_datos_en_ambas_direcciones_27 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-datos-en-ambas-direcciones-27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_eliminar_23 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eliminar-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_flecha_izquierda_larga_27 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-flecha-izquierda-larga-27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +206,16 @@ namespace ElRinconDelSaber.Properties {
         internal static System.Drawing.Bitmap icons8_seguridad_comprobado_23 {
             get {
                 object obj = ResourceManager.GetObject("icons8-seguridad-comprobado-23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

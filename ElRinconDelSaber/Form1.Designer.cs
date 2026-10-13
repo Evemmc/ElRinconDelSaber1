@@ -46,7 +46,7 @@
             lblEstado = new Label();
             cboxEstado = new ComboBox();
             lblFechaRegistro = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFechaRegistro = new DateTimePicker();
             btnGuardar = new Button();
             dgvUsuarios = new DataGridView();
             gboxDatosDeUsuarios = new GroupBox();
@@ -59,7 +59,7 @@
             btnBuscar = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
-            groupBox2 = new GroupBox();
+            gpbUusuariosRegistrados = new GroupBox();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             gboxDatosDeUsuarios.SuspendLayout();
@@ -67,7 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             gboxAcciones.SuspendLayout();
-            groupBox2.SuspendLayout();
+            gpbUusuariosRegistrados.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitulo
@@ -119,6 +119,7 @@
             txtNombre.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.Location = new Point(172, 69);
             txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "Ej.: María";
             txtNombre.Size = new Size(144, 27);
             txtNombre.TabIndex = 5;
             // 
@@ -138,7 +139,8 @@
             txtApellido.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtApellido.Location = new Point(340, 69);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(157, 27);
+            txtApellido.PlaceholderText = "Ej.: Pérez";
+            txtApellido.Size = new Size(182, 27);
             txtApellido.TabIndex = 7;
             // 
             // lblUsuario
@@ -157,6 +159,7 @@
             txtUsuario.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(29, 139);
             txtUsuario.Name = "txtUsuario";
+            txtUsuario.PlaceholderText = "Ej.: mperez";
             txtUsuario.Size = new Size(125, 27);
             txtUsuario.TabIndex = 9;
             // 
@@ -176,15 +179,17 @@
             txtContraseña.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContraseña.Location = new Point(172, 139);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(144, 27);
+            txtContraseña.PlaceholderText = "Ingrese una contraseña";
+            txtContraseña.Size = new Size(171, 27);
             txtContraseña.TabIndex = 11;
+            txtContraseña.UseSystemPasswordChar = true;
             // 
             // lblRol
             // 
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblRol.ForeColor = Color.Black;
-            lblRol.Location = new Point(340, 117);
+            lblRol.Location = new Point(365, 117);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(35, 19);
             lblRol.TabIndex = 12;
@@ -200,7 +205,7 @@
             cboxRol.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboxRol.FormattingEnabled = true;
             cboxRol.Items.AddRange(new object[] { "Seleccione un rol", "Administrador", "Bibliotecario", "Usuario" });
-            cboxRol.Location = new Point(340, 139);
+            cboxRol.Location = new Point(365, 139);
             cboxRol.Name = "cboxRol";
             cboxRol.Size = new Size(157, 27);
             cboxRol.TabIndex = 14;
@@ -239,13 +244,13 @@
             lblFechaRegistro.TabIndex = 17;
             lblFechaRegistro.Text = "Fecha de registro:";
             // 
-            // dateTimePicker1
+            // dtpFechaRegistro
             // 
-            dateTimePicker1.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(214, 212);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(283, 27);
-            dateTimePicker1.TabIndex = 18;
+            dtpFechaRegistro.Font = new Font("Calibri Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaRegistro.Location = new Point(214, 212);
+            dtpFechaRegistro.Name = "dtpFechaRegistro";
+            dtpFechaRegistro.Size = new Size(283, 27);
+            dtpFechaRegistro.TabIndex = 18;
             // 
             // btnGuardar
             // 
@@ -268,10 +273,11 @@
             // 
             // dgvUsuarios
             // 
+            dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(35, 38);
             dgvUsuarios.Name = "dgvUsuarios";
-            dgvUsuarios.Size = new Size(675, 112);
+            dgvUsuarios.Size = new Size(675, 140);
             dgvUsuarios.TabIndex = 26;
             dgvUsuarios.CellClick += dgvUsuarios_CellClick;
             // 
@@ -283,7 +289,7 @@
             gboxDatosDeUsuarios.Controls.Add(cboxRol);
             gboxDatosDeUsuarios.Controls.Add(lblEstado);
             gboxDatosDeUsuarios.Controls.Add(lblidUsuario);
-            gboxDatosDeUsuarios.Controls.Add(dateTimePicker1);
+            gboxDatosDeUsuarios.Controls.Add(dtpFechaRegistro);
             gboxDatosDeUsuarios.Controls.Add(lblFechaRegistro);
             gboxDatosDeUsuarios.Controls.Add(cboxEstado);
             gboxDatosDeUsuarios.Controls.Add(lblRol);
@@ -310,27 +316,27 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox2);
-            panel1.Location = new Point(520, 145);
+            panel1.Location = new Point(537, 131);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 120);
+            panel1.Size = new Size(183, 118);
             panel1.TabIndex = 20;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(7, 67);
+            label2.Location = new Point(3, 62);
             label2.Name = "label2";
-            label2.Size = new Size(184, 39);
+            label2.Size = new Size(177, 39);
             label2.TabIndex = 39;
-            label2.Text = "Asigne un rol y estado al usuario.\r\nLos roles determinan los permisos\r\n            dentro del sistema.\r\n";
+            label2.Text = "   Asigne un rol y estado al \r\n  usuario. Los roles determinan\r\n los permisos dentro del sistema.\r\n";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.ChatGPT_Image_26_ago_2026__02_54_38_p_m_;
-            pictureBox2.Location = new Point(67, 5);
+            pictureBox2.Location = new Point(63, 9);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(74, 59);
+            pictureBox2.Size = new Size(62, 50);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 38;
             pictureBox2.TabStop = false;
@@ -340,7 +346,7 @@
             pictureBox1.Image = Properties.Resources.ChatGPT_Image_26_ago_2026__02_46_25_p_m_;
             pictureBox1.Location = new Point(550, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(161, 130);
+            pictureBox1.Size = new Size(151, 125);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
@@ -437,17 +443,18 @@
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
             // 
-            // groupBox2
+            // gpbUusuariosRegistrados
             // 
-            groupBox2.Controls.Add(dgvUsuarios);
-            groupBox2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            groupBox2.ForeColor = Color.FromArgb(138, 31, 61);
-            groupBox2.Location = new Point(43, 488);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(739, 204);
-            groupBox2.TabIndex = 36;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "USUARIOS REGISTRADOS";
+            gpbUusuariosRegistrados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gpbUusuariosRegistrados.Controls.Add(dgvUsuarios);
+            gpbUusuariosRegistrados.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            gpbUusuariosRegistrados.ForeColor = Color.FromArgb(138, 31, 61);
+            gpbUusuariosRegistrados.Location = new Point(43, 488);
+            gpbUusuariosRegistrados.Name = "gpbUusuariosRegistrados";
+            gpbUusuariosRegistrados.Size = new Size(739, 204);
+            gpbUusuariosRegistrados.TabIndex = 36;
+            gpbUusuariosRegistrados.TabStop = false;
+            gpbUusuariosRegistrados.Text = "USUARIOS REGISTRADOS";
             // 
             // label1
             // 
@@ -469,7 +476,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(gboxDatosDeUsuarios);
             Controls.Add(gboxAcciones);
-            Controls.Add(groupBox2);
+            Controls.Add(gpbUusuariosRegistrados);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmGestionDeUsuarios";
             Text = "Gestión de usuarios";
@@ -482,7 +489,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             gboxAcciones.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
+            gpbUusuariosRegistrados.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -507,14 +514,14 @@
         private Label lblEstado;
         private ComboBox cboxEstado;
         private Label lblFechaRegistro;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFechaRegistro;
         private Button btnGuardar;
         private Button btnBuscar;
         private DataGridView dgvUsuarios;
         private Label lblRolesDisponibles;
         private GroupBox gboxDatosDeUsuarios;
         private GroupBox gboxAcciones;
-        private GroupBox groupBox2;
+        private GroupBox gpbUusuariosRegistrados;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnLimpiar;

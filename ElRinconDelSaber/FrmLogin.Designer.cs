@@ -42,7 +42,7 @@
             panel12 = new Panel();
             panel1 = new Panel();
             button1 = new Button();
-            linkLabel1 = new LinkLabel();
+            linklabelOlvidarContraseña = new LinkLabel();
             panel2 = new Panel();
             label7 = new Label();
             pictureBox3 = new PictureBox();
@@ -129,6 +129,7 @@
             txtContrasenaLogin.PlaceholderText = "Ingrese su contraseña";
             txtContrasenaLogin.Size = new Size(401, 29);
             txtContrasenaLogin.TabIndex = 8;
+            txtContrasenaLogin.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -184,18 +185,19 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // linkLabel1
+            // linklabelOlvidarContraseña
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.ForeColor = Color.FromArgb(138, 31, 61);
-            linkLabel1.LinkColor = Color.FromArgb(138, 31, 61);
-            linkLabel1.Location = new Point(308, 469);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(143, 17);
-            linkLabel1.TabIndex = 14;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "¿Olvidó su contraseña?";
+            linklabelOlvidarContraseña.AutoSize = true;
+            linklabelOlvidarContraseña.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linklabelOlvidarContraseña.ForeColor = Color.FromArgb(138, 31, 61);
+            linklabelOlvidarContraseña.LinkColor = Color.FromArgb(138, 31, 61);
+            linklabelOlvidarContraseña.Location = new Point(308, 469);
+            linklabelOlvidarContraseña.Name = "linklabelOlvidarContraseña";
+            linklabelOlvidarContraseña.Size = new Size(143, 17);
+            linklabelOlvidarContraseña.TabIndex = 14;
+            linklabelOlvidarContraseña.TabStop = true;
+            linklabelOlvidarContraseña.Text = "¿Olvidó su contraseña?";
+            linklabelOlvidarContraseña.LinkClicked += linklabelOlvidarContraseña_LinkClicked;
             // 
             // panel2
             // 
@@ -234,7 +236,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(label7);
             Controls.Add(panel2);
-            Controls.Add(linkLabel1);
+            Controls.Add(linklabelOlvidarContraseña);
             Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(panel12);
@@ -275,7 +277,7 @@
         private Panel panel12;
         private Panel panel1;
         private Button button1;
-        private LinkLabel linkLabel1;
+        private LinkLabel linklabelOlvidarContraseña;
         private Panel panel2;
         private Label label7;
         private PictureBox pictureBox3;

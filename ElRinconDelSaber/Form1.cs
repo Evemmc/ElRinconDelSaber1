@@ -9,6 +9,26 @@ namespace ElRinconDelSaber
         public FrmGestionDeUsuarios()
         {
             InitializeComponent();
+
+            bool tienePermiso =
+              SesionActual.Rol.Equals("Administrador", StringComparison.OrdinalIgnoreCase)
+             || SesionActual.Rol.Equals("Bibliotecario", StringComparison.OrdinalIgnoreCase);
+
+            if (!tienePermiso)
+            {
+                MessageBox.Show(
+                    "No tienes permisos para acceder a Gestión de Usuarios.",
+                    "Acceso denegado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                this.BeginInvoke(new Action(() => this.Close()));
+            }
+
+            dgvUsuarios.AutoSizeColumnsMode =
+            DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvUsuarios.ReadOnly = true;
             CargarUsuarios();
         }
 
@@ -85,7 +105,7 @@ namespace ElRinconDelSaber
             cboxRol.SelectedIndex = 0;
             cboxEstado.SelectedIndex = 0;
 
-            dateTimePicker1.Value = DateTime.Now;
+            dtpFechaRegistro.Value = DateTime.Now;
 
             txtNombre.Focus();
         }
@@ -140,9 +160,9 @@ namespace ElRinconDelSaber
                 using SqlConnection cn = conexion.ObtenerConexion();
 
                 string consulta = @"INSERT INTO Usuarios
-                            (Nombre, Apellido, Usuario, Contrasena, IdRol, Estado)
+                            (Nombre, Apellido, Usuario, Contrasena, IdRol, Estado, FechaRegistro)
                             VALUES
-                            (@Nombre, @Apellido, @Usuario, @Contrasena, @IdRol, @Estado)";
+                            (@Nombre, @Apellido, @Usuario, @Contrasena, @IdRol, @Estado, @FechaRegistro)";
 
                 using SqlCommand comando = new SqlCommand(consulta, cn);
 
@@ -155,6 +175,9 @@ namespace ElRinconDelSaber
 
                 bool estado = cboxEstado.SelectedItem?.ToString() == "Activo";
                 comando.Parameters.AddWithValue("@Estado", estado);
+
+                comando.Parameters.Add("@FechaRegistro", SqlDbType.DateTime)
+                  .Value = dtpFechaRegistro.Value.Date;
 
                 cn.Open();
                 comando.ExecuteNonQuery();

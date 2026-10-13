@@ -108,6 +108,12 @@ namespace ElRinconDelSaber
                     string nombre = lector["Nombre"].ToString() ?? "";
                     string rol = lector["NombreRol"].ToString() ?? "";
 
+                    SesionActual.IdUsuario =
+                    Convert.ToInt32(lector["IdUsuario"]);
+
+                    SesionActual.Nombre = nombre;
+                    SesionActual.Rol = rol;
+
                     MessageBox.Show(
                         $"Bienvenido/a {nombre}\nRol: {rol}",
                         "El Rincón del Saber",
@@ -143,6 +149,16 @@ namespace ElRinconDelSaber
                     MessageBoxIcon.Error
                 );
             }
+        }
+
+        private void linklabelOlvidarContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show(
+           "Para recuperar su contraseña, comuníquese con el administrador de la biblioteca.",
+           "Recuperación de contraseña",
+             MessageBoxButtons.OK,
+             MessageBoxIcon.Information
+    );
         }
     }
 }
